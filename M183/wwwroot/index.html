@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Modul 183 Insecure App: Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <script src="./js/index.js" type="text/javascript"></script>
+    <script src="./js/login.js" type="text/javascript"></script>
+    <script src="./js/createNews.js" type="text/javascript"></script>
+    <script src="./js/changePassword.js" type="text/javascript"></script>
+    <script src="./js/enable2FA.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+    <script src="https://kit.fontawesome.com/71ca2c6944.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="gridContainer">
+
+        <header>
+
+            <div class="flexContainer">
+                <div style="flex-grow: 20">
+                    <h1>Insecure App</h1>
+                </div>
+                <div>
+                    <h3 id="loggedInUsername">&lt;Username&gt;</h3>
+                </div>
+                <div>
+                    <div class="dropdown">
+                        <button class="btn" aria-label="Logout Button" onclick="toggleDropdown()">
+                            <i class="fa-regular fa-user"></i>
+                        </button>
+                        <div class="dropdown-content" id="dropdownContent">
+                            <a href="#" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html?page=createNews">New entry</a></li>
+                <li><a href="index.html?page=changePassword">Change password</a></li>
+                <li><a href="index.html?page=enable2FA">Enable 2FA</a></li>
+            </ul>
+        </nav>
+
+        <main id="main"></main>
+    </div> <!-- Grid. -->
+
+    <script>
+        if (!isLoggedIn()) {
+            createLoginForm();
+        }
+        else {
+            // User is lgged in.
+            document.getElementById("loggedInUsername").innerText = getUsername();
+
+            // Read parameter from URL.
+            var urlParams = new URLSearchParams(window.location.search);
+            var page = urlParams.get('page');
+
+            if (page == 'login') {
+                createLoginForm();
+            }
+            else if (page == 'createNews') {
+                createNews();
+            }
+            else if (page == 'changePassword') {
+                createChangePasswordForm();
+            }
+            else if (page == 'enable2FA') {
+                createEnable2FAForm();
+            }
+            else {
+                loadNews();
+            }
+        }
+    </script>
+</body>
+</html>

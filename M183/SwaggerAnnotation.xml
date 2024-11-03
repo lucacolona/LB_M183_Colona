@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>M183</name>
+    </assembly>
+    <members>
+        <member name="M:M183.Controllers.AuthController.Enable2FA">
+            <summary>
+            Enable 2FA for user using password and username
+            </summary>
+            <response code="200">Login successfull</response>
+            <response code="400">Bad request</response>
+            <response code="401">Login failed</response>
+        </member>
+        <member name="M:M183.Controllers.LoginController.Login(M183.Controllers.Dto.LoginDto)">
+            <summary>
+            Login a user using password and username
+            </summary>
+            <response code="200">Login successfull</response>
+            <response code="400">Bad request</response>
+            <response code="401">Login failed</response>
+        </member>
+        <member name="M:M183.Controllers.NewsController.GetAll">
+            <summary>
+            Retrieve all news entries ordered by PostedDate descending
+            </summary>
+            <response code="200">All news entries</response>
+        </member>
+        <member name="M:M183.Controllers.NewsController.GetById(System.Int32)">
+            <summary>
+            Retrieve a specific news entry by id
+            </summary>
+            <param name="id" example="123">The news id</param>
+            <response code="200">News retrieved</response>
+            <response code="404">News not found</response>
+        </member>
+        <member name="M:M183.Controllers.NewsController.Create(M183.Controllers.Dto.NewsDto)">
+            <summary>
+            Create a news entry
+            </summary>
+            <response code="201">News successfully created</response>
+        </member>
+        <member name="M:M183.Controllers.NewsController.Update(System.Int32,M183.Controllers.Dto.NewsDto)">
+            <summary>
+            Update a specific news by id
+            </summary>
+            <param name="id" example="123">The news id</param>
+            <response code="200">News retrieved</response>
+            <response code="404">News not found</response>
+        </member>
+        <member name="M:M183.Controllers.NewsController.Delete(System.Int32)">
+            <summary>
+            Delete a specific news by id
+            </summary>
+            <param name="id" example="123">The news id</param>
+            <response code="200">News deleted</response>
+            <response code="404">News not found</response>
+        </member>
+        <member name="M:M183.Controllers.UserController.PasswordUpdate(M183.Controllers.Dto.PasswordUpdateDto)">
+            <summary>
+            update password
+            </summary>
+            <response code="200">Password updated successfully</response>
+            <response code="400">Bad request</response>
+            <response code="404">User not found</response>
+        </member>
+        <member name="T:M183.Migrations.CreateDatabase">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.CreateDatabase.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.CreateDatabase.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.CreateDatabase.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:M183.Migrations.InitialData">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.InitialData.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.InitialData.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.InitialData.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:M183.Migrations.UserRole">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.UserRole.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.UserRole.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.UserRole.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:M183.Migrations.SecretKey2FA">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.SecretKey2FA.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.SecretKey2FA.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.SecretKey2FA.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:M183.Migrations.CreateTrigger">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.CreateTrigger.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.CreateTrigger.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.CreateTrigger.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:M183.Migrations.LoginAttemptsCount">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.LoginAttemptsCount.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.LoginAttemptsCount.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.LoginAttemptsCount.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:M183.Migrations.LoginAttemptsNotNullable">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.LoginAttemptsNotNullable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.LoginAttemptsNotNullable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:M183.Migrations.LoginAttemptsNotNullable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
