@@ -5,11 +5,6 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M183", "M183\M183.csproj", "{870864B0-EAFF-4211-B1EC-60C5738163B5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portfolio", "Portfolio", "{416466B8-8FB1-412D-8BA3-8B51FE6E30C9}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\LB\LB-M183_Colona_Luca.pdf = ..\..\LB\LB-M183_Colona_Luca.pdf
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
